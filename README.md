@@ -1,7 +1,9 @@
 
 快速预测：
+
        python test_OpenCV.py --image [要预测的图像(例如 ../../SecondProject/data/cat.9001.jpg)
 快速训练:
+
        python creat_tfrecords.py --data [图像数据集路径]
        python train.py
 
@@ -40,9 +42,8 @@ tfrecord格式的图像对内存友好，在使用tensorflow时因首先考虑�
 
 ---修改creat_tfrecords.py中的filename_train和filename_test,默认为train_200.tfrecords
 
----python creat_tfrecords.py --data [图像数据集路径]
+       python creat_tfrecords.py --data [图像数据集路径]
 
---####--
         python creat_tfrecords.py --data ../../SecondProject/data/
 
 2.----------------------------直接训练----------------------
