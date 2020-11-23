@@ -35,6 +35,7 @@ quickly to start the network:
 
 1.------------------------制作tfrecord格式的数据集：----------
 
+
 tfrecord格式的图像对内存友好，在使用tensorflow时因首先考虑该格式
 
 ---修改creat_tfrecords.py中的filename_train和filename_test,默认为train_200.tfrecords
@@ -45,9 +46,10 @@ tfrecord格式的图像对内存友好，在使用tensorflow时因首先考虑�
         python creat_tfrecords.py --data ../../SecondProject/data/
 
 2.----------------------------直接训练----------------------
----修改train.py里的tfrecords路径，学习率等
 
----python train.py --typenets [网络类型(默认resnet101)]
+       修改train.py里的tfrecords路径，学习率等
+
+              python train.py --typenets [网络类型(默认resnet101)]
 
         可供选择的网络类型:vggnet16,resnet50,resnet101,resnet152
         
@@ -60,23 +62,25 @@ tfrecord格式的图像对内存友好，在使用tensorflow时因首先考虑�
         classify.pb等文件
         
 3.----------------------------测试模型--------------------
----包含两个test_OpenCV.py 和 test_PIL.py
+
+    包含两个test_OpenCV.py 和 test_PIL.py
     
     
     两个模型的使用方法一样:
     
---------python test_PIL.py --model [meta文件如model/model.ckpt-20000.meta] --image [要预测的图像(例如 ../../SecondProject/data/cat.9001.jpg)]
+       python test_PIL.py --model [meta文件如model/model.ckpt-20000.meta] --image [要预测的图像(例如 ../../SecondProject/data/cat.9001.jpg)]
         
---------python test_OpenCV.py --model [meta文件如model/model.ckpt-20000.meta] --image [要预测的图像(例如 ../../SecondProject/data/cat.9001.jpg)]
+       python test_OpenCV.py --model [meta文件如model/model.ckpt-20000.meta] --image [要预测的图像(例如 ../../SecondProject/data/cat.9001.jpg)]
 
         #也可以使用固化的pb模型
---------python test_OpenCV.py --image [要预测的图像(例如 ../../SecondProject/data/cat.9001.jpg)]
+       python test_OpenCV.py --image [要预测的图像(例如 ../../SecondProject/data/cat.9001.jpg)]
 
         python test_OpenCV.py --model model/model.ckpt-20000.meta --image ../../SecondProject/data/cat.9001.jpg
         
         python test_OpenCV.py --image ../../SecondProject/data/cat.9001.jpg
 
 4.-----------------------查看训练精度过程--------------
+
         tensorboard --logdir=./log/log
         
         
