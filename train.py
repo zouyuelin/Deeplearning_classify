@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 """
-    姓名：邹岳霖,马国语
+    姓名：邹岳霖
     学校：天津大学
     专业：机械工程
     学院：机械工程学院
-    designer by zouyuelin & maguoyu
+    designer by zouyuelin
     Tianjin University(TJU)
     tel 18222927836
 """
